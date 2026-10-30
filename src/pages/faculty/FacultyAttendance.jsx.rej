@@ -1,0 +1,19 @@
+@@ -8,2 +8,2 @@
+-import { Play, StopCircle, Users, CheckCircle2, XCircle, Clock, QrCode } from 'lucide-react';
++import { Play, StopCircle, Users, CheckCircle2, XCircle, Clock } from 'lucide-react';
+ import { useAuth } from '../../context/AuthContext';
+@@ -11,4 +10,4 @@
+   const [sessionActive, setSessionActive] = useState(false);
+-  const [sessions, setSessions] = useState([]);
+-  const [selectedSessionId, setSelectedSessionId] = useState(null);
+-  const [qrToken, setQrToken] = useState(null);
++  const [courses, setCourses] = useState([]);
++  const [selectedCourseId, setSelectedCourseId] = useState(null);
++  const [activeSessionId, setActiveSessionId] = useState(null);
+@@ -23,3 +22,3 @@
+-  const selectedSession = useMemo(
+-    () => sessions.find((session) => session.sessionId === selectedSessionId) || null,
+-    [sessions, selectedSessionId]
++  const selectedCourse = useMemo(
++    () => courses.find((course) => course.courseId === selectedCourseId) || null,
++    [courses, selectedCourseId]
